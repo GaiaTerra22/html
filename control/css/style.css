@@ -1,0 +1,446 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'C4';
+    overflow: auto;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: slideUp 4s ease-in-out forwards;
+    /* Cambiada la duración */
+}
+
+.loader img {
+    width: 1000px;
+}
+
+.hidden {
+    display: none;
+}
+
+/********************************************************* Index *********************************************************/
+
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, -50%);
+        /* Inicialmente sin curvatura */
+        animation-timing-function: ease-in;
+        /* La animación empieza más lenta */
+    }
+
+    20% {
+        transform: translate(-50%, -50%);
+        /* Estirando ligeramente sin curvatura */
+        animation-timing-function: ease-in;
+        /* La animación se queda quieta */
+    }
+
+    100% {
+        transform: translate(-50%, -700%);
+        /* Curvatura hacia arriba */
+        animation-timing-function: ease-out;
+        /* La animación acelera al final */
+    }
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+    background-color: black;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    z-index: 1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation: removeBorderRadius 3s ease-in-out forwards;
+    min-height: 100vh;
+}
+
+.content .titulo {
+    font-size: 0;
+    /* Hacer el texto invisible al principio */
+    margin-top: 100px;
+    animation: fadeInText 6s forwards;
+    /* Aplicar la animación para hacer aparecer el texto */
+}
+
+@keyframes removeBorderRadius {
+    0% {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    100% {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        font-size: 0;
+        /* Hacer el texto invisible */
+    }
+
+    100% {
+        font-size: 24px;
+        /* Hacer aparecer el texto con un tamaño específico */
+    }
+}
+
+/* Definir la fuente personalizada */
+@font-face {
+    font-family: 'C4';
+    src: url('../../font/fonts/otf/C4v.4-Regular.otf') format('truetype');
+}
+
+.navbar {
+    position: fixed;
+    /* Hacer que el navbar sea fijo */
+    width: 100%;
+    /* Ocupar todo el ancho de la pantalla */
+    z-index: 1000;
+    /* Asegurar que el navbar esté por encima de otros elementos */
+    background-color: black;
+    /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.container {
+    max-width: 1400px;
+    /* Ancho máximo */
+    width: 100%;
+    /* Ocupar todo el ancho de la pantalla */
+    padding: 0 15px;
+    /* Añadir espacio a los lados del contenido */
+}
+
+.navbar-1-link {
+    font-size: 24px;
+    color: beige;
+    transition: transform 1.5s ease-in-out;
+}
+
+.navbar-1-link:hover {
+    transform: rotateX(360deg);
+}
+
+.navbar-1-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    /* Ajusta la distancia del subrayado */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Grosor del subrayado */
+    background-color: beige;
+}
+
+.navbar-nav .nav-item a.active {
+    border-bottom: 1px solid beige;
+    font-weight: bold;
+    /* Opcional: hacer el texto en negrita */
+}
+
+/* Estilos CSS para el contenedor de la imagen */
+.image-container {
+    margin: 200px auto;
+    /* Margen superior e inferior para separar del texto */
+    text-align: center;
+    /* Centrar la imagen horizontalmente */
+    max-width: 800px;
+    /* Tamaño máximo para ajustar al ancho de la página */
+}
+
+/* Estilos CSS para la imagen */
+.rotating-image {
+    transition: transform 0.5s;
+    /* Transición suave de la rotación */
+}
+
+/* Explore */
+.explore {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    margin-bottom: 170px;
+}
+
+.exploreImg {
+    margin-left: 20rem;
+    animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scrolling portfolio */
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 1350px;
+    /* Ejemplo: posicionamiento vertical centrado */
+    left: -5000px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 50s linear infinite;
+}
+
+.marquee2 span {
+    animation-delay: 25s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+/* Imagenes con texto index */
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+    text-align: center;
+    /* Alinear el contenido al centro */
+    margin-bottom: 50px;
+    /* Espacio entre las secciones */
+}
+
+.section img {
+    width: 450px;
+    /* Tamaño deseado para las imágenes */
+    height: auto;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 1s ease;
+}
+
+.caption {
+    font-size: 124px;
+    /* Tamaño del texto */
+    text-align: center;
+    /* Alinear el texto al centro */
+    animation: captionAnimation 5s infinite;
+    /* Ajusta la duración de la animación según lo desees */
+}
+
+.image-holder {
+    display: inline-block;
+    /* Para que el texto no esté en la misma línea que la imagen */
+    position: relative;
+    /* Permitir el posicionamiento del texto relativo al contenedor de la imagen */
+}
+
+@keyframes captionAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+        /* Ajusta la distancia vertical que deseas */
+    }
+}
+
+.section img:hover {
+    transform: scale(1.1);
+    /* Zoom in by 10% */
+    filter: blur(1px);
+    /* Apply blur effect */
+}
+
+/* Boton contacto */
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* Espaciado interno */
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contactos {
+    display: flex;
+    gap: 10px;
+    /* Espaciado entre los elementos */
+}
+
+.contactos img {
+    width: 30px;
+    /* Ancho de las imágenes de contacto */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+}
+
+section {
+    margin-left: 6rem;
+}
+
+/********************************************************* Trabajos *********************************************************/
+h1 {
+    font-size: 120px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Galeria tatoos */
+.img-hover-zoom {
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.img-hover-zoom img {
+    height: 400px;
+    width: 400px;
+    filter: grayscale(100%);
+    transition: filter 5s ease, transform 2s ease;
+    /* Agrupando múltiples transiciones */
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.3);
+    filter: grayscale(0%);
+}
+
+/********************************************************* Contacto *********************************************************/
+.contacto{
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contacto div{
+    margin: 20px;
+    max-width: 40rem;
+}
+
+.title{
+    text-align: center;
+}
