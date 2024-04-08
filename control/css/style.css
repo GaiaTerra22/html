@@ -200,13 +200,10 @@
 
     /* Explore */
     .explore {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr 1fr 1fr;
         margin-bottom: 170px;
     }
 
     .exploreImg {
-        margin-left: 20rem;
         animation: rotate 7s linear infinite;
     }
 
@@ -486,5 +483,11 @@
                 font-size: 18px;
                 /* Hacer aparecer el texto con un tamaño específico */
             }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .marquee {
+            top: auto;
         }
     }
