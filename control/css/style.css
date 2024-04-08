@@ -540,6 +540,18 @@
             margin-top: 0;
             /* Eliminar el espacio entre la sección de copyright y la sección de CV en pantallas pequeñas */
         }
+
+        .title {
+            padding: 1rem;
+        }
+
+        .title h1 {
+            font-size: 50px;
+        }
+
+        .title span {
+            font-size: 15px;
+        }
     }
 
     @media (max-width: 480px) {
