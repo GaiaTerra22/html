@@ -175,6 +175,11 @@
         color: beige;
     }
 
+    .dropdown-item.active, .dropdown-item:active {
+        color: black;
+        text-decoration: none;
+        background-color: beige;
+    }
     .container {
         max-width: 1400px;
         /* Ancho máximo */
@@ -445,7 +450,7 @@
         /* Agrupando múltiples transiciones */
     }
 
-    .tatuajecontainer{
+    .tatuajecontainer {
         display: flex;
         justify-content: center;
     }
@@ -482,12 +487,12 @@
             height: 300px;
             width: 300px;
         }
-    
+
         .img-hover-zoom img {
             height: 300px;
             width: 300px;
         }
-      
+
     }
 
     @media (max-width: 1000px) {
@@ -541,10 +546,10 @@
             font-size: 40px;
         }
 
-        
+
     }
 
- 
+
 
     @media (max-width: 700px) {
         .section img {
@@ -577,7 +582,7 @@
             height: 200px;
             width: 200px;
         }
-    
+
         .img-hover-zoom img {
             height: 200px;
             width: 200px;
@@ -598,7 +603,7 @@
             height: 150px;
             width: 150px;
         }
-    
+
         .img-hover-zoom img {
             height: 150px;
             width: 150px;
