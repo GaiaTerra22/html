@@ -94,19 +94,23 @@
     }
 
     .titulo span {
-        font-size: inherit; /* Hereda el tamaño de fuente de la clase .titulo */
+        font-size: inherit;
+        /* Hereda el tamaño de fuente de la clase .titulo */
     }
-    
+
     .titulo span.destacado {
-        font-size: 108px; /* Tamaño de fuente grande para palabras importantes */
+        font-size: 108px;
+        /* Tamaño de fuente grande para palabras importantes */
     }
-    
+
     .titulo span.destacado2 {
-        font-size: 152px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+        font-size: 152px;
+        /* Tamaño de fuente aún más grande para palabras aún más importantes */
     }
-    
+
     .titulo span.destacado3 {
-        font-size: 178px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+        font-size: 178px;
+        /* Tamaño de fuente aún más grande para palabras aún más importantes */
     }
 
     @keyframes removeBorderRadius {
@@ -139,35 +143,35 @@
         src: url('../../font/fonts/otf/C4v.4-Regular.otf') format('truetype');
     }
 
-    .bg-dark{
+    .bg-dark {
         background-color: black !important;
     }
-    
-    .navbar-collapse{
+
+    .navbar-collapse {
         flex-grow: 0;
     }
 
-    .container-fluid{
+    .container-fluid {
         width: 80%;
         font-size: 24px;
     }
 
-    .nav-link{
+    .nav-link {
         color: beige !important;
     }
 
-    .nav-item{
+    .nav-item {
         display: flex;
         justify-content: end;
     }
 
-    .dropdown-menu{
+    .dropdown-menu {
         font-family: 'Courier New', Courier, monospace;
         border: 1px solid beige;
         background-color: transparent;
     }
 
-    .dropdown-item{
+    .dropdown-item {
         color: beige;
     }
 
@@ -453,24 +457,29 @@
     /********************************************************* Responsividad *********************************************************/
 
     @media (max-width: 1000px) {
-        .loader-img, .loader {
+
+        .loader-img,
+        .loader {
             display: none;
         }
 
-        .titulo{
+        .titulo {
             margin: 20px;
         }
-        
+
         .titulo span.destacado {
-            font-size: 54px; /* Tamaño de fuente grande para palabras importantes */
+            font-size: 54px;
+            /* Tamaño de fuente grande para palabras importantes */
         }
-        
+
         .titulo span.destacado2 {
-            font-size: 76px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+            font-size: 76px;
+            /* Tamaño de fuente aún más grande para palabras aún más importantes */
         }
-        
+
         .titulo span.destacado3 {
-            font-size: 89px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+            font-size: 89px;
+            /* Tamaño de fuente aún más grande para palabras aún más importantes */
         }
 
         @keyframes fadeInText {
@@ -478,16 +487,35 @@
                 font-size: 0;
                 /* Hacer el texto invisible */
             }
-    
+
             100% {
                 font-size: 18px;
                 /* Hacer aparecer el texto con un tamaño específico */
             }
         }
+
+        .section img {
+            width: 325px;
+        }
+
+        .esplore{
+            margin-bottom: 300px;
+        }
+
+        .caption{
+            margin-top: 300px;
+            font-size: 40px;
+        }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 1100px) {
         .marquee {
             top: auto;
+        }
+    }
+
+    @media (max-width: 700px) {
+         .section img {
+            width: 225px;
         }
     }
