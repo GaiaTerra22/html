@@ -385,6 +385,8 @@
     /* Footer */
     .footer {
         display: flex;
+        flex-wrap: wrap;
+        /* Permitir que los elementos se envuelvan en varias líneas */
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
@@ -397,6 +399,13 @@
         display: flex;
         gap: 10px;
         /* Espaciado entre los elementos */
+        margin-bottom: 10px;
+        /* Espacio entre la sección de contactos y otros elementos en pantallas pequeñas */
+    }
+
+    .contactos a {
+        display: inline-block;
+        /* Evitar que los íconos se apilen verticalmente */
     }
 
     .contactos img {
@@ -406,9 +415,12 @@
         /* Altura automática para mantener la proporción */
     }
 
-    section {
-        margin-left: 6rem;
+    .cv {
+        margin-top: 10px;
+        /* Espacio entre la sección de copyright y la sección de CV en pantallas pequeñas */
     }
+
+
 
     /********************************************************* Trabajos *********************************************************/
     h1 {
@@ -498,11 +510,11 @@
             width: 325px;
         }
 
-        .esplore{
+        .esplore {
             margin-bottom: 300px;
         }
 
-        .caption{
+        .caption {
             margin-top: 300px;
             font-size: 40px;
         }
@@ -515,7 +527,28 @@
     }
 
     @media (max-width: 700px) {
-         .section img {
+        .section img {
             width: 225px;
+        }
+
+        .footer {
+            flex-direction: column;
+            /* Organizar los elementos en columnas en pantallas pequeñas */
+        }
+
+        .cv {
+            margin-top: 0;
+            /* Eliminar el espacio entre la sección de copyright y la sección de CV en pantallas pequeñas */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section img {
+            width: 155px;
+        }
+
+        .caption {
+            margin-top: 100px;
+            font-size: 35px;
         }
     }
