@@ -7,44 +7,49 @@
     <link rel="icon" type="image/x-icon" href="media/logo.png">
     <link rel="icon" type="image/x-icon" href="../media/logo.png">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Tu CSS personalizado -->
     <link rel="stylesheet" href="../control/css/style.css">
     <!-- Font Awesome para el icono del botón del menú -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
             <!-- Logo -->
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="../media/logo.png" alt="Logo" style="max-height: 40px;">
             </a>
-            <!-- Botón del menú -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fas fa-bars" style="color: beige;"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Menú desplegable -->
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto" style="text-align: right;">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">
-                            <div class="navbar-1-link">Inicio</div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Trabajos
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../paginas/trabajos.html">Tatuajes</a></li>
+                            <li><a class="dropdown-item" href="#">Música</a></li>
+                            <li>
+                                </li>
+                            <li><a class="dropdown-item" href="#">Ilustraciones</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../paginas/trabajos.html">
-                            <div class="navbar-1-link">Trabajos</div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/contacto.html">
-                            <div class="navbar-1-link">Contacto</div>
-                        </a>
+                        <a class="nav-link" href="../paginas/contacto.html">Contacto</a>
                     </li>
                 </ul>
-            </div>            
+            </div>
         </div>
     </nav>
 
@@ -87,7 +92,7 @@
     <!-- Bootstrap JavaScript y dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <!-- Tu JavaScript personalizado -->
     <!-- Tu JavaScript personalizado -->
     <script src="../control/js/script.js"></script>
 </body>
