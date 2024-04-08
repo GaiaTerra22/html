@@ -88,9 +88,25 @@
     .content .titulo {
         font-size: 0;
         /* Hacer el texto invisible al principio */
-        margin-top: 100px;
+        margin-top: 70px;
         animation: fadeInText 6s forwards;
         /* Aplicar la animación para hacer aparecer el texto */
+    }
+
+    .titulo span {
+        font-size: inherit; /* Hereda el tamaño de fuente de la clase .titulo */
+    }
+    
+    .titulo span.destacado {
+        font-size: 108px; /* Tamaño de fuente grande para palabras importantes */
+    }
+    
+    .titulo span.destacado2 {
+        font-size: 152px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+    }
+    
+    .titulo span.destacado3 {
+        font-size: 178px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
     }
 
     @keyframes removeBorderRadius {
@@ -138,6 +154,11 @@
 
     .nav-link{
         color: beige !important;
+    }
+
+    .nav-item{
+        display: flex;
+        justify-content: end;
     }
 
     .dropdown-menu{
@@ -433,3 +454,37 @@
 
 
     /********************************************************* Responsividad *********************************************************/
+
+    @media (max-width: 1000px) {
+        .loader-img, .loader {
+            display: none;
+        }
+
+        .titulo{
+            margin: 20px;
+        }
+        
+        .titulo span.destacado {
+            font-size: 54px; /* Tamaño de fuente grande para palabras importantes */
+        }
+        
+        .titulo span.destacado2 {
+            font-size: 76px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+        }
+        
+        .titulo span.destacado3 {
+            font-size: 89px; /* Tamaño de fuente aún más grande para palabras aún más importantes */
+        }
+
+        @keyframes fadeInText {
+            0% {
+                font-size: 0;
+                /* Hacer el texto invisible */
+            }
+    
+            100% {
+                font-size: 18px;
+                /* Hacer aparecer el texto con un tamaño específico */
+            }
+        }
+    }
