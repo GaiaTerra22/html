@@ -160,21 +160,16 @@
         color: beige !important;
     }
 
-    .nav-item {
-        display: flex;
-        justify-content: end;
-    }
-
     .nav-link.active{
         font-weight: bold;
-        border-bottom: 1px solid beige;
     }
 
     .dropdown-menu {
         font-family: 'Courier New', Courier, monospace;
         border: 1px solid beige;
         background-color: transparent;
-    }
+        width: 25%;
+    }   
 
     .dropdown-item {
         color: beige;
@@ -445,6 +440,7 @@
         width: 400px;
         overflow: hidden;
         margin: 10px;
+        border-radius: 2px;
     }
 
     .img-hover-zoom img {
@@ -453,6 +449,7 @@
         filter: grayscale(100%);
         transition: filter 5s ease, transform 2s ease;
         /* Agrupando múltiples transiciones */
+        border-radius: 2px;
     }
 
     .tatuajecontainer {
